@@ -9,7 +9,7 @@
         {
             "type": "package",
             "package": {
-                "version": "dev-improvements",
+                "version": "improvements",
                 "name": "laravel/dusk",
                 "source": {
                     "url": "https://github.com/SimZal/dusk-1.git",
