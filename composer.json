@@ -1,44 +1,43 @@
 {
-    "name": "laravel/dusk",
-    "description": "Laravel Dusk provides simple end-to-end testing and browser automation.",
-    "keywords": ["laravel", "testing", "webdriver"],
-    "license": "MIT",
-    "homepage": "https://laravel.com",
-    "support": {
-        "issues": "https://github.com/laravel/dusk/issues",
-        "source": "https://github.com/laravel/dusk"
-    },
-    "authors": [
+    "name": "duncan3dc/dusk",
+    "type": "library",
+    "description": "Use Laravel Dusk without the full Laravel framework",
+    "keywords": ["laravel", "browser", "engine", "screen", "scraping"],
+    "homepage": "https://github.com/duncan3dc/dusk",
+    "license": "Apache-2.0",
+    "repositories": [
         {
-            "name": "Taylor Otwell",
-            "email": "taylor@laravel.com"
-        }
-    ],
+            "type": "package",
+            "package": {
+                "version": "dev-improvements",
+                "name": "laravel/dusk",
+                "source": {
+                    "url": "https://github.com/SimZal/dusk-1.git",
+                    "type": "git",
+                    "reference": "improvements"
+                }
+            }
+        }        
+    ],      
+    "authors": [{
+        "name": "Craig Duncan",
+        "email": "git@duncanc.co.uk",
+        "homepage": "https://github.com/duncan3dc",
+        "role": "Developer"
+    }],
     "require": {
-        "php": ">=5.6.4",
-        "facebook/webdriver": "~1.0",
-        "illuminate/console": "~5.4",
-        "illuminate/support": "~5.4",
-        "nesbot/carbon": "~1.20",
-        "symfony/console": "~3.2",
-        "symfony/process": "~3.2"
+        "laravl/dusk": "dev-improvements",
+        "php": "^5.6|^7.0"
     },
     "require-dev": {
-        "mockery/mockery": "^0.9.6",
-        "phpunit/phpunit": "^5.7"
+        "duncan3dc/object-intruder": "^0.1.0",
+        "mockery/mockery": "^0.9.5",
+        "phpunit/phpunit": "^5.5"
     },
     "autoload": {
         "psr-4": {
-            "Laravel\\Dusk\\": "src/"
+            "duncan3dc\\Laravel\\": "src/",
+            "duncan3dc\\LaravelTests\\": "tests/"
         }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "2.0-dev"
-        }
-    },
-    "config": {
-        "sort-packages": true
-    },
-    "minimum-stability": "dev"
+    }
 }
