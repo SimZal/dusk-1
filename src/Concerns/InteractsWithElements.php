@@ -11,6 +11,13 @@ use Facebook\WebDriver\Interactions\WebDriverActions;
 
 trait InteractsWithElements
 {
+
+	public function switchToLastWindow(){
+		$handles = $this->driver->getWindowHandles();
+		$this->driver->switchTo()->window(array_pop($handles));
+		
+	}	
+	
     /**
      * Get all of the elements matching the given selector.
      *
